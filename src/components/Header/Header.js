@@ -10,14 +10,14 @@ const Header = () => {
 
       <Routes>
         <Route
-          path='/developers'
+          path='/exam-dimensions-trending/developers'
           element={
             <p>these are the developers building the hot tools today&#46;</p>
           }
         />
 
         <Route
-          path='/repos'
+          path='/exam-dimensions-trending/repos'
           element={
             <p>
               see what the&nbsp;

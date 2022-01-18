@@ -43,7 +43,7 @@ const App = () => {
       <Layout>
         <Routes>
           <Route
-            path='/developers'
+            path='/exam-dimensions-trending/developers'
             element={
               <Suspense fallback={<Loading />}>
                 <DevsPage Devs={Devs} />
@@ -51,7 +51,7 @@ const App = () => {
             }
           />
           <Route
-            path='/repos'
+            path='/exam-dimensions-trending/repos'
             element={
               <Suspense fallback={<Loading />}>
                 <ReposPage Repos={Repos} />
@@ -61,7 +61,7 @@ const App = () => {
           <Route
             exact
             path='/exam-dimensions-trending/'
-            element={<Navigate to='/repos' />}
+            element={<Navigate to='/exam-dimensions-trending/repos' />}
           />
         </Routes>
       </Layout>

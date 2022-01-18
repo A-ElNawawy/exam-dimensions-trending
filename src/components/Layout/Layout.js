@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <nav className={styles.nav}>
           <div className={styles.links}>
             <NavLink
-              to='/repos'
+              to='/exam-dimensions-trending/repos'
               activeclassname='active'
               className={styles.repos}
             >
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             </NavLink>
 
             <NavLink
-              to='/developers'
+              to='/exam-dimensions-trending/developers'
               activeclassname='active'
               className={styles.devs}
             >
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           <div className={styles.filters}>
             <Routes>
               <Route
-                path='/repos'
+                path='/exam-dimensions-trending/repos'
                 element={
                   <label>
                     Spoken Languages:
