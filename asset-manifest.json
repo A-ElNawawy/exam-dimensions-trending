@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/exam-dimensions-trending/static/css/main.14ba5a25.css",
-    "main.js": "/exam-dimensions-trending/static/js/main.e93876f6.js",
+    "main.js": "/exam-dimensions-trending/static/js/main.708cfba5.js",
     "static/css/313.dffbd141.chunk.css": "/exam-dimensions-trending/static/css/313.dffbd141.chunk.css",
     "static/js/313.3467071c.chunk.js": "/exam-dimensions-trending/static/js/313.3467071c.chunk.js",
     "static/css/625.ba65449b.chunk.css": "/exam-dimensions-trending/static/css/625.ba65449b.chunk.css",
     "static/js/625.6e168c87.chunk.js": "/exam-dimensions-trending/static/js/625.6e168c87.chunk.js",
     "index.html": "/exam-dimensions-trending/index.html",
     "main.14ba5a25.css.map": "/exam-dimensions-trending/static/css/main.14ba5a25.css.map",
-    "main.e93876f6.js.map": "/exam-dimensions-trending/static/js/main.e93876f6.js.map",
+    "main.708cfba5.js.map": "/exam-dimensions-trending/static/js/main.708cfba5.js.map",
     "313.dffbd141.chunk.css.map": "/exam-dimensions-trending/static/css/313.dffbd141.chunk.css.map",
     "313.3467071c.chunk.js.map": "/exam-dimensions-trending/static/js/313.3467071c.chunk.js.map",
     "625.ba65449b.chunk.css.map": "/exam-dimensions-trending/static/css/625.ba65449b.chunk.css.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.14ba5a25.css",
-    "static/js/main.e93876f6.js"
+    "static/js/main.708cfba5.js"
   ]
 }
