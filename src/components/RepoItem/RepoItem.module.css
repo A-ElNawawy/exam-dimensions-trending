@@ -17,27 +17,6 @@
   font-size: 25px;
 }
 
-.repo_item .top .actions {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.repo_item .top .actions button {
-  border: none;
-  background-color: #21212e;
-  color: #c5cbd4;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.repo_item .heart {
-  color: #9a4a79;
-}
-
 .repo_item .bottom {
   padding: 20px 0;
   display: flex;

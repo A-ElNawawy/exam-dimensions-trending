@@ -1,5 +1,8 @@
 import React from "react";
 
+import Actions from "./../Actions/Actions";
+import Button from "./../Button/Button";
+
 import styles from "./DevItem.module.css";
 
 const DevItem = ({ dev }) => {
@@ -45,16 +48,16 @@ const DevItem = ({ dev }) => {
         ) : null}
       </div>
 
-      <div className={styles.actions}>
-        <button>
-          <i className={`${styles.heart} ${"far fa-heart"}`}></i>&nbsp;
+      <Actions>
+        <Button>
+          <i className='heart far fa-heart'></i>&nbsp;
           <p>Sponsor</p>
-        </button>
+        </Button>
 
-        <button>
+        <Button>
           <p>Follow</p>
-        </button>
-      </div>
+        </Button>
+      </Actions>
     </li>
   );
 };

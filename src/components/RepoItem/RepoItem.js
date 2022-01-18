@@ -1,5 +1,8 @@
 import React from "react";
 
+import Actions from "./../Actions/Actions";
+import Button from "./../Button/Button";
+
 import styles from "./RepoItem.module.css";
 
 const RepoItem = ({ repo }) => {
@@ -19,17 +22,17 @@ const RepoItem = ({ repo }) => {
           <p className='description'>{repo.description}</p>
         </div>
 
-        <div className={styles.actions}>
-          <button>
-            <i className={`${styles.heart} ${"far fa-heart"}`}></i>&nbsp;
+        <Actions>
+          <Button>
+            <i className='heart far fa-heart'></i>&nbsp;
             <p>Sponsor</p>
-          </button>
+          </Button>
 
-          <button>
+          <Button>
             <i className='far fa-star'></i>&nbsp;
             <p>Star</p>
-          </button>
-        </div>
+          </Button>
+        </Actions>
       </div>
 
       <div className={styles.bottom}>

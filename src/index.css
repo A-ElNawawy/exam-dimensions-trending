@@ -20,3 +20,11 @@ hr {
 a {
   text-decoration: none;
 }
+
+.heart {
+  color: #9a4a79;
+}
+
+.active {
+  background-color: #196ce9;
+}

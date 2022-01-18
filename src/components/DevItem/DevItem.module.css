@@ -42,25 +42,3 @@
 .dev_item .popular .fire {
   color: #a55f2e;
 }
-
-.dev_item .actions {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 20px;
-}
-
-.dev_item .actions button {
-  border: none;
-  display: flex;
-  align-items: center;
-  background-color: #21212e;
-  color: #c5cbd4;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.dev_item .actions .heart {
-  color: #9a4a79;
-}

@@ -4,7 +4,6 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import Container from "./../Container/Container";
 
 import styles from "./Layout.module.css";
-import "./Layout.css";
 
 const Layout = ({ children }) => {
   return (
