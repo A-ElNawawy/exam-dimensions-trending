@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink, Routes, Route } from "react-router-dom";
 
-//import Header from "./../Header/Header";
 import Container from "./../Container/Container";
 
 import styles from "./Layout.module.css";

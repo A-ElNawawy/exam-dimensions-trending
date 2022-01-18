@@ -22,6 +22,7 @@ const DevItem = ({ dev }) => {
           <i className={`${styles.fire} ${"fas fa-fire"}`}></i>&nbsp;
           <p>Popular Repo</p>
         </button>
+
         <button>
           <i className='fas fa-laptop'></i>&nbsp;
           {dev.popularRepository.repositoryName ? (
@@ -36,6 +37,7 @@ const DevItem = ({ dev }) => {
             <p>Not Found</p>
           )}
         </button>
+
         {dev.popularRepository.description ? (
           <button>
             <p>{dev.popularRepository.description}</p>
@@ -48,6 +50,7 @@ const DevItem = ({ dev }) => {
           <i className={`${styles.heart} ${"far fa-heart"}`}></i>&nbsp;
           <p>Sponsor</p>
         </button>
+
         <button>
           <p>Follow</p>
         </button>

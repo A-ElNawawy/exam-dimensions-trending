@@ -3,10 +3,10 @@ import React from "react";
 import styles from "./RepoItem.module.css";
 
 const RepoItem = ({ repo }) => {
-  //console.log(repo);
   const builders = repo.builtBy.map((builder) => (
     <img key={builder.username} src={builder.avatar} alt={builder.username} />
   ));
+
   return (
     <li className={styles.repo_item}>
       <div className={styles.top}>
@@ -24,6 +24,7 @@ const RepoItem = ({ repo }) => {
             <i className={`${styles.heart} ${"far fa-heart"}`}></i>&nbsp;
             <p>Sponsor</p>
           </button>
+
           <button>
             <i className='far fa-star'></i>&nbsp;
             <p>Star</p>
@@ -34,14 +35,18 @@ const RepoItem = ({ repo }) => {
       <div className={styles.bottom}>
         <div className={styles.statistics}>
           <span>{repo.language}</span>
+
           <span>
             <i className='far fa-star'></i>
             &nbsp;{repo.totalStars}
           </span>
+
           <span>
             <i className='fas fa-code-branch'></i>&nbsp; {repo.forks}
           </span>
+
           <span className={styles.built_by}>built by&nbsp;</span>
+
           {builders}
         </div>
 

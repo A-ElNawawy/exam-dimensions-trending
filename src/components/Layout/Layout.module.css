@@ -1,8 +1,6 @@
 .layout {
   border: 1px solid #232736;
   border-radius: 5px;
-  /*border-top-left-radius: 5px;*/
-  /*padding-bottom: 15px;*/
 }
 
 .nav {
@@ -11,23 +9,18 @@
   padding: 15px;
   justify-content: space-between;
   align-items: center;
-  /*margin-bottom: 20px;*/
 }
 
 .links {
   background-color: transparent;
-  /*padding: 10px;*/
 }
 
 .links a {
-  text-decoration: none;
-
   color: #c5cbd4;
   display: inline-block;
   padding: 10px 15px;
   border: 1px solid #c5cbd4;
   border-collapse: collapse;
-  /*border-color: #c5cbd4;*/
 }
 
 .links .repos {
@@ -41,10 +34,6 @@
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-
-/*.links a.active {
-  background-color: #196ce9;
-}*/
 
 .filters {
   display: flex;

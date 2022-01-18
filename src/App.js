@@ -31,9 +31,6 @@ const App = () => {
     getData(devs).then((devs) => setDevs(devs));
   }, []);
 
-  //console.log({ Repos });
-  //console.log({ Devs });
-
   return (
     <div className='App'>
       <Header />
