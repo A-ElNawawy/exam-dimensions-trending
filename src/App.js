@@ -58,7 +58,11 @@ const App = () => {
               </Suspense>
             }
           />
-          <Route exact path='/' element={<Navigate to='/repos' />} />
+          <Route
+            exact
+            path='/exam-dimensions-trending/'
+            element={<Navigate to='/repos' />}
+          />
         </Routes>
       </Layout>
     </div>
