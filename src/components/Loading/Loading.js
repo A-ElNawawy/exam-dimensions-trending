@@ -6,7 +6,7 @@ const style = {
 };
 
 const Loading = () => {
-  return <div style={style}>Loading</div>;
+  return <div style={style}>Loading...</div>;
 };
 
 export default Loading;

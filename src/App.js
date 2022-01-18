@@ -10,15 +10,19 @@ const repos = "https://gh-trending-api.herokuapp.com/repositories";
 const devs = "https://gh-trending-api.herokuapp.com/developers";
 
 const getData = async (url) => {
-  const res = await fetch(url);
+  try {
+    const res = await fetch(url);
 
-  if (!res.ok) {
-    throw new Error("We got an error");
+    if (!res.ok) {
+      throw new Error("Sorry, We have an error");
+    }
+
+    const data = await res.json();
+
+    return data;
+  } catch (error) {
+    alert(error.message);
   }
-
-  const data = await res.json();
-
-  return data;
 };
 
 const App = () => {
