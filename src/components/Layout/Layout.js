@@ -1,9 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 //import Header from "./../Header/Header";
 import Container from "./../Container/Container";
 
 import styles from "./Layout.module.css";
+import "./Layout.css";
 
 const Layout = ({ children }) => {
   return (
@@ -12,12 +14,29 @@ const Layout = ({ children }) => {
       <div className={styles.layout}>
         <nav className={styles.nav}>
           <div className={styles.links}>
-            <a href='#void' className={`${styles.active} ${styles.repos}`}>
+            <NavLink
+              to='/repos'
+              activeClassName='active'
+              className={styles.repos}
+            >
               Repositories
-            </a>
-            <a href='#void' className={` ${styles.devs}`}>
+            </NavLink>
+
+            <NavLink
+              to='/developers'
+              activeClassName='active'
+              className={styles.devs}
+            >
               Developers
-            </a>
+            </NavLink>
+
+            {/*<a href='#void' className={`${styles.active} ${styles.repos}`}>
+              Repositories
+            </a>*/}
+
+            {/*<a href='#void' className={styles.devs}>
+              Developers
+            </a>*/}
           </div>
 
           <div className={styles.filters}>

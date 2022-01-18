@@ -50,7 +50,6 @@ const RepoItem = ({ repo }) => {
           &nbsp; {repo.starsSince} stars today
         </div>
       </div>
-      <hr />
     </li>
   );
 };
