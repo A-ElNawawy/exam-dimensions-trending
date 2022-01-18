@@ -9,6 +9,7 @@ const Devs = ({ Devs }) => {
       {index !== Devs.length - 1 ? <hr /> : null}
     </div>
   ));
+
   return <ul>{DevsList}</ul>;
 };
 
