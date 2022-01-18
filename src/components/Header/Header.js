@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import styles from "./Header.module.css";
@@ -34,4 +34,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

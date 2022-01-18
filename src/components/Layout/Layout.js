@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { NavLink, Routes, Route } from "react-router-dom";
 
 import Container from "./../Container/Container";
@@ -65,4 +65,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default memo(Layout);
