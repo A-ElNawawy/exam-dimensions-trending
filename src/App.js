@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router";
 
-import ReposPage from "./pages/ReposPage/ReposPage";
-import DevsPage from "./pages/DevsPage/DevsPage";
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
+import Loading from "./components/Loading/Loading";
 
 const repos = "https://gh-trending-api.herokuapp.com/repositories";
 const devs = "https://gh-trending-api.herokuapp.com/developers";
@@ -26,6 +25,9 @@ const App = () => {
   const [Repos, setRepos] = useState([]);
   const [Devs, setDevs] = useState([]);
 
+  const DevsPage = lazy(() => import("./pages/DevsPage/DevsPage"));
+  const ReposPage = lazy(() => import("./pages/ReposPage/ReposPage"));
+
   useEffect(() => {
     getData(repos).then((repos) => setRepos(repos));
     getData(devs).then((devs) => setDevs(devs));
@@ -36,8 +38,22 @@ const App = () => {
       <Header />
       <Layout>
         <Routes>
-          <Route path='/developers' element={<DevsPage Devs={Devs} />} />
-          <Route path='/repos' element={<ReposPage Repos={Repos} />} />
+          <Route
+            path='/developers'
+            element={
+              <Suspense fallback={<Loading />}>
+                <DevsPage Devs={Devs} />
+              </Suspense>
+            }
+          />
+          <Route
+            path='/repos'
+            element={
+              <Suspense fallback={<Loading />}>
+                <ReposPage Repos={Repos} />
+              </Suspense>
+            }
+          />
           <Route exact path='/' element={<Navigate to='/repos' />} />
         </Routes>
       </Layout>
