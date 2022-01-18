@@ -3,18 +3,18 @@ import React from "react";
 import styles from "./DevItem.module.css";
 
 const DevItem = ({ dev }) => {
+  console.log(dev);
   return (
     <li className={styles.dev_item}>
-      <div className={styles.index}>1</div>
+      <div className={styles.index}>{dev.rank}</div>
 
       <div className={styles.user}>
-        <img
-          src='https://avatars.githubusercontent.com/u/8456633?s=96&v=4'
-          alt='sdfdf'
-        />
+        <img src={dev.avatar} alt={dev.name} />
         <div>
-          <a href='#void'>dsfsdf daskk adue</a>
-          <p>name</p>
+          <a href={dev.url} target='_blank' rel='noreferrer'>
+            {dev.name}
+          </a>
+          <p>{dev.username}</p>
         </div>
       </div>
 
@@ -25,12 +25,23 @@ const DevItem = ({ dev }) => {
         </button>
         <button>
           <i className='fas fa-laptop'></i>&nbsp;
-          <a href='#void'>Repo Name</a>
-          {/*<p>Repo Name</p>*/}
+          {dev.popularRepository.repositoryName ? (
+            <a
+              href={dev.popularRepository.url}
+              target='_blank'
+              rel='noreferrer'
+            >
+              {dev.popularRepository.repositoryName}
+            </a>
+          ) : (
+            <p>Not Found</p>
+          )}
         </button>
-        <button>
-          <p>afasdfhlkfsdfs</p>
-        </button>
+        {dev.popularRepository.description ? (
+          <button>
+            <p>{dev.popularRepository.description}</p>
+          </button>
+        ) : null}
       </div>
 
       <div className={styles.actions}>

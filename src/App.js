@@ -30,7 +30,7 @@ const App = () => {
   }, []);
 
   //console.log({ Repos });
-  console.log({ Devs });
+  //console.log({ Devs });
 
   return (
     <div className='App'>

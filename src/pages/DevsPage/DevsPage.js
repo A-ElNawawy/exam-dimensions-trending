@@ -6,18 +6,16 @@ import DevItem from "./../../components/DevItem/DevItem";
 
 const Devs = ({ Devs }) => {
   //console.log(Devs);
-  //const DevsList = Devs.map((dev) => {
-  //  //console.log(dev.username);
-  //  return <DevItem key={""} dev={dev} />;
-  //});
-  return (
-    <ul>
-      <DevItem
-      //key={""} dev={dev}
-      />
-      <hr />
-    </ul>
-  );
+  const DevsList = Devs.map((dev, index, Devs) => {
+    //console.log(dev);
+    return (
+      <div key={dev.username}>
+        <DevItem dev={dev} />
+        {index !== Devs.length - 1 ? <hr /> : null}
+      </div>
+    );
+  });
+  return <ul>{DevsList}</ul>;
 };
 
 export default Devs;
