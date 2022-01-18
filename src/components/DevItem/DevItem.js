@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./DevItem.module.css";
 
 const DevItem = ({ dev }) => {
-  console.log(dev);
   return (
     <li className={styles.dev_item}>
       <div className={styles.index}>{dev.rank}</div>

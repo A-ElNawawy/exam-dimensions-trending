@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Routes, Route } from "react-router-dom";
 
 //import Header from "./../Header/Header";
 import Container from "./../Container/Container";
@@ -10,13 +10,12 @@ import "./Layout.css";
 const Layout = ({ children }) => {
   return (
     <Container>
-      {/*<Header />*/}
       <div className={styles.layout}>
         <nav className={styles.nav}>
           <div className={styles.links}>
             <NavLink
               to='/repos'
-              activeClassName='active'
+              activeclassname='active'
               className={styles.repos}
             >
               Repositories
@@ -24,34 +23,35 @@ const Layout = ({ children }) => {
 
             <NavLink
               to='/developers'
-              activeClassName='active'
+              activeclassname='active'
               className={styles.devs}
             >
               Developers
             </NavLink>
-
-            {/*<a href='#void' className={`${styles.active} ${styles.repos}`}>
-              Repositories
-            </a>*/}
-
-            {/*<a href='#void' className={styles.devs}>
-              Developers
-            </a>*/}
           </div>
 
           <div className={styles.filters}>
-            <label>
-              Spoken Languages:
-              <select name='spokenLangs'>
-                <option value='any'>Any</option>
-              </select>
-            </label>
+            <Routes>
+              <Route
+                path='/repos'
+                element={
+                  <label>
+                    Spoken Languages:
+                    <select name='spokenLangs'>
+                      <option value='any'>Any</option>
+                    </select>
+                  </label>
+                }
+              />
+            </Routes>
+
             <label>
               Languages:
               <select name='langs'>
                 <option value='any'>Any</option>
               </select>
             </label>
+
             <label>
               Date Range:
               <select name='dateRange'>
@@ -60,6 +60,7 @@ const Layout = ({ children }) => {
             </label>
           </div>
         </nav>
+
         <main className={styles.main}>{children}</main>
       </div>
     </Container>

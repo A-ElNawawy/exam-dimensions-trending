@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-//import { Redirect } from "react-router";
+import { Navigate } from "react-router";
 
 import ReposPage from "./pages/ReposPage/ReposPage";
 import DevsPage from "./pages/DevsPage/DevsPage";
@@ -41,10 +41,7 @@ const App = () => {
         <Routes>
           <Route path='/developers' element={<DevsPage Devs={Devs} />} />
           <Route path='/repos' element={<ReposPage Repos={Repos} />} />
-          <Route path='/' element={<ReposPage Repos={Repos} />} />
-          {/*<Route exact path='/'>
-            <Redirect to='/repos' />
-          </Route>*/}
+          <Route exact path='/' element={<Navigate to='/repos' />} />
         </Routes>
       </Layout>
     </div>
