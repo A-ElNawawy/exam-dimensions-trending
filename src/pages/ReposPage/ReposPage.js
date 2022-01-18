@@ -10,20 +10,14 @@ const Repos = ({ Repos }) => {
     //console.log(repo.username);
     return (
       <RepoItem
-        key={repo.username}
-        username={repo.username}
-        repositoryName={repo.repositoryName}
+        key={repo.username + repo.repositoryName}
+        //username={repo.username}
+        //repositoryName={repo.repositoryName}
+        repo={repo}
       />
     );
   });
-  return (
-    <ul>
-      <RepoItem />
-      <RepoItem />
-      <RepoItem />
-      {ReposList}
-    </ul>
-  );
+  return <ul>{ReposList}</ul>;
 };
 
 export default Repos;

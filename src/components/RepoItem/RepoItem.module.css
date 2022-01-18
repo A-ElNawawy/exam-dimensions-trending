@@ -21,18 +21,20 @@
 
 .repo_item .top .actions {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
 }
 
 .repo_item .top .actions button {
   /*background: none;*/
   border: none;
+  display: flex;
+  align-items: center;
   background-color: #21212e;
   color: #c5cbd4;
   border-radius: 5px;
-  padding: 5px 10px;
-  min-width: 90px;
-  height: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 .repo_item .heart {
