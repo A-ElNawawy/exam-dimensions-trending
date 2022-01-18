@@ -1,0 +1,132 @@
+.dev_item {
+  list-style: none;
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 30px 40% 35% auto;
+  /*justify-content: space-between;*/
+}
+
+.dev_item .index {
+  /*background-color: red;*/
+  /*width: 20px;*/
+  /*margin-right: 20px;*/
+}
+
+.dev_item .user {
+  /*background-color: blue;*/
+  display: flex;
+  gap: 20px;
+  /*margin-right: 60px;*/
+}
+
+.dev_item .user img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.dev_item .user a {
+  text-decoration: none;
+  color: #196ce9;
+  font-size: 25px;
+}
+
+.dev_item .popular {
+  /*background-color: brown;*/
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+}
+
+.dev_item .popular button {
+  border: none;
+  background-color: transparent;
+  color: #c5cbd4;
+  display: flex;
+  align-items: center;
+}
+
+.dev_item .popular .fire {
+  color: #a55f2e;
+}
+
+.dev_item .popular a {
+  text-decoration: none;
+  color: #196ce9;
+}
+
+.dev_item .actions {
+  /*background-color: violet;*/
+  /*margin-left: auto;*/
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.dev_item .actions button {
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: #21212e;
+  color: #c5cbd4;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dev_item .actions .heart {
+  color: #9a4a79;
+}
+
+/*
+.dev_item .top {
+  display: flex;
+  justify-content: space-between;
+  /*gap: 50px;
+}
+
+.dev_item .top p {
+  width: 85%;
+}
+
+.dev_item .top a {
+  text-decoration: none;
+  color: #196ce9;
+  font-size: 25px;
+}
+
+
+.dev_item .heart {
+  color: #9a4a79;
+}
+
+.dev_item .bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.dev_item .bottom .statistics {
+  display: flex;
+  align-items: center;
+}
+
+.dev_item .bottom span:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.dev_item .bottom .statistics img {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.dev_item .bottom .statistics img:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+*/

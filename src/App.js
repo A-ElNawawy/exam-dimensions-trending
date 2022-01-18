@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import ReposPage from "./pages/ReposPage/ReposPage";
-//import DevsPage from "./pages/Devs/Devs";
+import DevsPage from "./pages/DevsPage/DevsPage";
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
 
@@ -30,14 +30,14 @@ const App = () => {
   }, []);
 
   //console.log({ Repos });
-  //console.log({ Devs });
+  console.log({ Devs });
 
   return (
     <div className='App'>
       <Header />
       <Layout>
-        <ReposPage Repos={Repos} />
-        {/*<DevsPage />*/}
+        {/*<ReposPage Repos={Repos} />*/}
+        <DevsPage Devs={Devs} />
       </Layout>
     </div>
   );
