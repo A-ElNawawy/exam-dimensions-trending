@@ -1,6 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
-import { Navigate } from "react-router";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
