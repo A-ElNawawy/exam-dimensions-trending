@@ -10,14 +10,14 @@ const Header = () => {
 
       <Routes>
         <Route
-          path='/exam-dimensions-trending/developers'
+          path={process.env.PUBLIC_URL + "/developers"}
           element={
             <p>these are the developers building the hot tools today&#46;</p>
           }
         />
 
         <Route
-          path='/exam-dimensions-trending/repos'
+          path={process.env.PUBLIC_URL + "/repos"}
           element={
             <p>
               see what the&nbsp;

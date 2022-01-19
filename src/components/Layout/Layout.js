@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <nav className={styles.nav}>
           <div className={styles.links}>
             <NavLink
-              to='/exam-dimensions-trending/repos'
+              to={process.env.PUBLIC_URL + "/repos"}
               activeclassname='active'
               className={styles.repos}
             >
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             </NavLink>
 
             <NavLink
-              to='/exam-dimensions-trending/developers'
+              to={process.env.PUBLIC_URL + "/developers"}
               activeclassname='active'
               className={styles.devs}
             >
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           <div className={styles.filters}>
             <Routes>
               <Route
-                path='/exam-dimensions-trending/repos'
+                path={process.env.PUBLIC_URL + "/repos"}
                 element={
                   <label>
                     Spoken Languages:
