@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Header/Header";
@@ -40,34 +40,21 @@ const App = () => {
     <div className='App'>
       <Header />
       <Layout>
-        <Routes>
-          <Route
-            path={process.env.PUBLIC_URL + "/developers"}
-            element={
-              <Suspense fallback={<Loading />}>
-                <DevsPage Devs={Devs} />
-              </Suspense>
-            }
-          />
-          <Route
-            path={process.env.PUBLIC_URL + "/repos"}
-            element={
-              <Suspense fallback={<Loading />}>
-                <ReposPage Repos={Repos} />
-              </Suspense>
-            }
-          />
-          <Route
-            exact
-            path={process.env.PUBLIC_URL + "/"}
-            element={<Navigate to={process.env.PUBLIC_URL + "/repos"} />}
-          />
-          <Route
-            exact
-            path='/'
-            element={<Navigate to={process.env.PUBLIC_URL + "/repos"} />}
-          />
-        </Routes>
+        <Route path='/developers'>
+          <Suspense fallback={<Loading />}>
+            <DevsPage Devs={Devs} />
+          </Suspense>
+        </Route>
+
+        <Route path='/repos'>
+          <Suspense fallback={<Loading />}>
+            <ReposPage Repos={Repos} />
+          </Suspense>
+        </Route>
+
+        <Route exact path='/'>
+          <Redirect to='/repos' />
+        </Route>
       </Layout>
     </div>
   );

@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 
 import Container from "./../Container/Container";
 
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <nav className={styles.nav}>
           <div className={styles.links}>
             <NavLink
-              to={process.env.PUBLIC_URL + "/repos"}
+              to='/repos'
               activeclassname='active'
               className={styles.repos}
             >
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             </NavLink>
 
             <NavLink
-              to={process.env.PUBLIC_URL + "/developers"}
+              to='/developers'
               activeclassname='active'
               className={styles.devs}
             >
@@ -29,19 +29,14 @@ const Layout = ({ children }) => {
           </div>
 
           <div className={styles.filters}>
-            <Routes>
-              <Route
-                path={process.env.PUBLIC_URL + "/repos"}
-                element={
-                  <label>
-                    Spoken Languages:
-                    <select name='spokenLangs'>
-                      <option value='any'>Any</option>
-                    </select>
-                  </label>
-                }
-              />
-            </Routes>
+            <Route path='/repos'>
+              <label>
+                Spoken Languages:
+                <select name='spokenLangs'>
+                  <option value='any'>Any</option>
+                </select>
+              </label>
+            </Route>
 
             <label>
               Languages:
