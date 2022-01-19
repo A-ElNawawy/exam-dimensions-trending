@@ -63,6 +63,11 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/"}
             element={<Navigate to={process.env.PUBLIC_URL + "/repos"} />}
           />
+          <Route
+            exact
+            path='/'
+            element={<Navigate to={process.env.PUBLIC_URL + "/repos"} />}
+          />
         </Routes>
       </Layout>
     </div>
